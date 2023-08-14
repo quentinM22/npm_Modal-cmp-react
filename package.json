@@ -1,0 +1,74 @@
+{
+  "version": "0.1.13",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@quentinm22/modal-cmp-react",
+  "author": "quentinM22",
+  "module": "dist/modal-cmp-react.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/modal-cmp-react.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/modal-cmp-react.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@size-limit/preset-small-lib": "^8.2.6",
+    "@storybook/addon-essentials": "^7.1.1",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^7.1.1",
+    "@storybook/addons": "^7.1.1",
+    "@storybook/react": "^7.1.1",
+    "@types/react": "^18.2.16",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.3",
+    "cssnano": "^6.0.1",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "size-limit": "^8.2.6",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  }
+}
