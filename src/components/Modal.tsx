@@ -1,6 +1,23 @@
 
 import React, { useEffect, useState } from "react"
 
+/**
+ * Modal - Component - Show Modal Component
+ * 
+ * @component
+ * @param {Object} props - Component props.
+ * @param {boolean} props.toggle - Show or not the modal.
+ * @param {Function} props.onClose - Function to be called for closed modal.
+ * @param {number[]} props.backgroundColor - Background color in RGBA format.
+ * @param {string} props.border - Border style of the modal.
+ * @param {string} props.title - Title of this modal.
+ * @param {string} props.content - Content of this modal.
+ * @param {number} props.width - Width of the modal in percentage.
+ * @returns {JSX.Element | null} - Modal component JSX element or null if not toggled.
+ * 
+ * @author quentinm22
+ */
+
 export interface ModalProps {
     toggle: boolean;
     onClose: () => void;
